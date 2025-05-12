@@ -7,6 +7,7 @@ const  mongoose = require("mongoose")
 const PORT = process.env.PORT || 3333
 const app = express()
 connectDB()
+app.use
 app.use(express.json())
 app.use(cors(corsOptions))
 app.use("/api/store",require("./routs/storeRouts"))
@@ -14,6 +15,7 @@ app.use("/api/city",require("./routs/cityRouts"))
 app.use("/api/product",require("./routs/productRouts"))
 app.use("/api/price",require("./routs/priceRouts"))
 app.use("/api/user",require("./routs/userRouts"))
+app.use("/api/auth", require("./routs/authRoutes"))
 mongoose.connection.on('err', () => {
     console.log(" connection  error " + err)
 })
