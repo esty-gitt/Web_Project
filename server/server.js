@@ -22,7 +22,7 @@ mongoose.connection.on('err', () => {
 mongoose.connection.once('open', () => {
     console.log("the connection to the DB is open")
     app.listen(PORT, () => {
-        console.log(`the server is running on port ${PORT}`)
+        console.log(`the server is running on port ${PORT} `)
     })
 })
 
